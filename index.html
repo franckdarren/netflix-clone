@@ -8,31 +8,48 @@
     <script src="script.js"></script>
 </head>
 
-<body class="flex flex-col gap-[16px] bg-black">
+<body class="flex flex-col gap-[16px] bg-black md:gap-[0]">
     <!-- Header Section -->
-    <header class="bg-[url('assets/mobile/header-mobile.jpg')] bg-cover bg-center">
+    <header class="bg-[url('assets/mobile/header-mobile.jpg')] bg-cover bg-center md:h-[512px] lg:h-[700px]">
         <!-- Navbar -->
         <nav class="flex justify-between items-center p-[24px]">
-            <img src="assets/logo.svg" class="w-[89px] h-[24px]">
-            <button class="w-[76px] h-[32px] bg-[#E50914] text-white font-medium text-[13.45px] rounded-[4px]">Sign
-                In</button>
+            <img src="assets/logo.svg" class="w-[89px] h-[24px] lg:w-[148px] lg:h-[40px]">
+            <div class="flex items-center gap-[8px] lg:gap-[24px]">
+                <button
+                    class="hidden md:flex w-[125px] h-[32px] bg-black/30 text-white font-regular text-[15.5px] rounded-[4px] flex justify-between items-center border border-1 px-[12px]">
+                    <span>
+                        <img src="assets/mobile/Img.svg" alt="image">
+                    </span> English
+                    <span>
+                        <img src="assets/mobile/Img2.svg" alt="arrow-down">
+                    </span>
+                </button>
+                <button class="w-[76px] h-[32px] bg-[#E50914] text-white font-medium text-[13.45px] rounded-[4px]">Sign
+                    In
+                </button>
+            </div>
         </nav>
 
         <!-- Hero Section -->
-        <div class="px-[24px] flex flex-col gap-[16px]">
-            <p class="text-white text-center font-bold text-[31.13px] px-[9.19px]">Unlimited movies, TV shows, and more
+        <div class="px-[24px] flex flex-col gap-[16px] md:mt-[122px]">
+            <p class="text-white text-center font-bold lg:font-black text-[31.13px] lg:text-[46.13px] px-[9.19px]">
+                Unlimited movies, TV shows, and more
             </p>
-            <p class="text-white text-center font-regular text-[17.02px]">Watch anywhere. Cancel anytime.</p>
+            <p class="text-white text-center font-regular text-[17.02px] lg:text-[22.69px]">Watch anywhere. Cancel
+                anytime.</p>
             <div class="mb-[40px] flex flex-col gap-[17px]">
-                <p class="text-white text-center px-[80px]">Ready to watch? Enter your email to create or restart your
+                <p class="text-white text-center px-[80px] font-regular text-[17.02px] lg:text-[18.75px]">Ready to
+                    watch? Enter your email to create or restart your
                     membership.
                 </p>
-                <input type="text" name="" id="" placeholder="Email address"
-                    class="mx-auto w-[75%] h-[48px] rounded-[4px] px-[16px] bg-[#161616]/70 border-[1px] border-[#808080]/70 ">
-                <button
-                    class="w-[157px] h-[48px] bg-[#E50914] text-white font-medium text-[16.59px] rounded-[4px] flex justify-center items-center mx-auto">Get
-                    Started <span><img src="assets/mobile/arrow-white.svg" alt="arrow" class="pl-[8px]"></span>
-                </button>
+                <div class="flex flex-col gap-[15px] md:flex md:flex-row md:justify-center md:gap-[8px]">
+                    <input type="text" name="" id="" placeholder="Email address"
+                        class="w-[75%] h-[48px] rounded-[4px] px-[16px] bg-[#161616]/70 border-[1px] border-[#808080]/70 mx-auto md:h-[56px] md:w-[356.25px] md:mx-[0]">
+                    <button
+                        class="w-[157px] h-[48px] bg-[#E50914] text-white font-medium text-[16.59px] md:text-[22.13px] rounded-[4px] flex justify-center items-center mx-auto md:h-[56px] md:w-[207px] md:mx-[0]">Get
+                        Started <span><img src="assets/mobile/arrow-white.svg" alt="arrow" class="pl-[8px]"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -40,12 +57,15 @@
     <!-- Main -->
 
     <!-- Pub -->
-    <div>
-        <img src="assets/mobile/SVG.svg" alt="popcorn box image" class="absolute top-[426px] left-[20px]">
-        <div class="px-[30px] bg-[#0E1945] pt-[50px] pb-[35px]">
-            <div class="h-[120px] flex flex-col justify-between">
-                <p class="text-white font-regular text-[17.02px]">The Netflix you love for just<br> $6.99.</p>
-                <p class="text-white font-regular text-[15px]">Get the Standard with ads plan.</p>
+    <div
+        class="md:flex bg-[#0E1945] md:justify-center md:items-center h-[200px] md:h-[140px] lg:w-[85%] lg:mx-auto lg:relative lg:top-[-70px]">
+        <img src="assets/mobile/SVG.svg" alt="popcorn box image"
+            class="absolute top-[450px] left-[20px] md:relative md:top-[0] md:left-[0]">
+        <div class="px-[30px] pt-[50px] pb-[35px]">
+            <div class="flex flex-col justify-between">
+                <p class="text-white font-medium text-[18.44px] mb-[5px] pr-[50px] md:pr-[0]">The Netflix you love for
+                    just $6.99.</p>
+                <p class="text-white font-regular text-[15px] mb-[10px]">Get the Standard with ads plan.</p>
                 <a href="#"
                     class="text-[#448EF4] font-medium text-[15px] flex h-[24px] underline underline-offset-2">Learn More
                     <span>
@@ -57,84 +77,105 @@
     </div>
 
     <!-- Section Enjoy on your TV -->
-    <div class="mt-[25px]">
-        <p class="text-white font-bold text-[31.88px] text-center mb-[16px]">Enjoy on your TV</p>
-        <p class="text-white font-regular text-[17.2px] text-center px-[35px] leading-[20px]">Watch on Smart TVs, Playstation, Xbox,
-            Chromecast, Apple TV, Blu-ray players,
-            and more.
-        </p>
+    <div
+        class="mt-[25px] md:mt-[75px] lg:h-[290px] lg:mb-[72px] lg:mt-[0] lg:grid lg:grid-cols-2 lg:pl-[40px] lg:justify-center lg:items-center">
+        <div>
+            <p
+                class="text-white font-bold lg:font-black text-[31.88px] lg:text-[46.69px] text-center lg:text-left mb-[16px]">
+                Enjoy on your TV</p>
+            <p
+                class="text-white font-regular text-[17.2px] lg:text-[22.5px] text-center lg:text-left px-[35px] lg:px-[0] leading-[20px] lg:leading-[30px]">
+                Watch on Smart TVs,
+                Playstation, Xbox,
+                Chromecast, Apple TV, Blu-ray players,
+                and more.
+            </p>
+        </div>
         <img src="assets/mobile/tv.png" alt="tv" class="mx-auto mb-[56px]">
     </div>
 
     <!-- Section Watch everywhere  -->
     <div>
-        <div class="h-[7px] bg-[#232323] mb-[26px]"></div>
-        <div class="px-[24px] pb-[45px]">
-            <p class="text-white text-center font-bold text-[30.38px] px-[9.19px] mb-[10px]">Watch everywhere</p>
-            <p class="text-white font-regular text-[17.2px] text-center leading-[20px]">Stream unlimited movies and TV shows
-                on your phone, tablet, laptop, and TV.
-            </p>
-            <img src="assets/mobile/Container.png" alt="devices" class="mt-[15px] mx-auto">
+        <div class="h-[7px] bg-[#232323] mb-[26px] md:mb-[60px]"></div>
+        <div
+            class="px-[24px] pb-[45px] lg:pb-[0] lg:mb-[72px] lg:h-[360px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+            <img src="assets/mobile/Container.png" alt="devices" class="mt-[15px] mx-auto lg:flex">
+            <div>
+                <p
+                    class="text-white text-center font-bold lg:font-black lg:text-[44.25px] lg:text-left text-[30.38px] px-[9.19px] mb-[10px]">
+                    Watch everywhere</p>
+                <p
+                    class="text-white font-regular text-[17.2px] lg:text-[22.69px] lg:text-left text-center leading-[20px] lg:leading-[30px]">
+                    Stream unlimited movies and
+                    TV shows on your phone, tablet, laptop, and TV.
+                </p>
+            </div>
+            <img src="assets/mobile/Container.png" alt="devices" class="mt-[15px] mx-auto lg:hidden">
         </div>
     </div>
 
     <!-- Section Create profiles for kids -->
     <div>
-        <div class="h-[7px] bg-[#232323] mb-[26px]"></div>
-        <div class="px-[24px] pb-[45px]">
-            <p class="text-white text-center font-bold text-[30.38px] px-[9.19px] mb-[10px]">Create profiles for
-                kids</p>
-            <p class="text-white font-regular text-[17.2px] text-center leading-[20px]">Send kids on adventures with their favorite
-                characters in a space made just for them <br />
-                —free with your membership.
-            </p>
+        <div class="h-[7px] bg-[#232323] mb-[26px] md:mb-[60px] lg:mb-[0]"></div>
+        <div class="px-[24px] pb-[45px] lg:pb-[0] lg:my-[72px] lg:h-[360px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+            <div>
+                <p class="text-white text-center font-bold lg:font-black lg:text-[44.25px] lg:text-left text-[30.38px] px-[9.19px] mb-[10px]">Create profiles for
+                    kids</p>
+                <p class="text-white font-regular text-[17.2px] lg:text-[22.69px] lg:text-left lg:leading-[30px] text-center leading-[20px]">Send kids on adventures with
+                    their favorite
+                    characters in a space made just for them —free with your membership.
+                </p>
+            </div>
             <img src="assets/mobile/kids.png" alt="image-kids" class="mt-[15px] mx-auto">
         </div>
     </div>
 
     <!-- Section Download -->
     <div>
-        <div class="h-[7px] bg-[#232323] mb-[26px]"></div>
-        <div class="px-[24px] pb-[45px]">
-            <p class="text-white text-center font-bold text-[30.38px] px-[9.19px] mb-[10px]">Download your shows
-                to watch offline</p>
-            <p class="text-white font-regular text-[17.2px] text-center">Watch on a plane, train, or submarine...
-            </p>
-            <img src="assets/mobile/Container2.png" alt="image" class="mt-[15px] mx-auto">
+        <div class="h-[7px] bg-[#232323] mb-[26px] md:mb-[60px]"></div>
+        <div class="px-[24px] pb-[45px] lg:pb-[0] lg:my-[72px] lg:h-[360px] lg:grid lg:grid-cols-2 lg:justify-center lg:items-center">
+            <img src="assets/mobile/Container2.png" alt="image" class="mt-[15px] mx-auto lg:flex">
+            <div>
+                <p class="text-white text-center font-bold lg:font-black lg:text-[44.25px] lg:text-left text-[30.38px] px-[9.19px] mb-[10px]">Download your shows
+                    to watch offline</p>
+                <p class="text-white font-regular text-[17.2px] lg:text-[22.69px] lg:text-left lg:leading-[30px] text-center leading-[20px]">Watch on a plane, train, or submarine...
+                </p>
+            </div>
+            <img src="assets/mobile/Container2.png" alt="image" class="mt-[15px] mx-auto lg:hidden">
         </div>
     </div>
 
     <!-- Section FAQ -->
     <div>
-        <div class="h-[7px] bg-[#232323] mb-[25px]"></div>
+        <div class="h-[7px] bg-[#232323] mb-[60px]"></div>
         <div class="px-[24px] pb-[45px]">
-            <p class="text-white text-center font-bold text-[30.38px] px-[9.19px] mb-[20px]">Frequently Asked Questions
+            <p class="text-white text-center font-bold text-[30.38px] px-[9.19px] mb-[20px] lg:font-black lg:text-[44.25px]">Frequently Asked Questions
             </p>
 
             <!-- FAQ -->
             <div class="flex flex-col gap-[9px]">
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">What is Netflix?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">What is Netflix?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">How much does Netflix cost?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">How much does Netflix cost?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">Where can I watch?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">Where can I watch?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">How do I cancel?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">How do I cancel?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">What can I watch on Netflix?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">What can I watch on Netflix?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
                 <div class="h-[72px] flex justify-between items-center px-[24px] bg-[#2D2D2D]">
-                    <p class="text-white font-regular text-[16.88px]">Is Netflix good for kids?</p>
+                    <p class="text-white font-regular text-[16.88px] lg:text-[22.5px]">Is Netflix good for kids?</p>
                     <img src="assets/mobile/plus.svg" alt="icone-plus" srcset="">
                 </div>
             </div>
@@ -143,17 +184,19 @@
             <div class="flex flex-col justify-center gap-[16px]">
                 <p class="text-white font-regular text-[17.02px] text-center mt-[40px] px-[30px]">Ready to watch? Enter
                     your email to create or restart your membership.</p>
-                <input type="text" name="" id="" placeholder="Email address"
-                    class="mx-auto w-[75%] h-[48px] rounded-[4px] px-[16px] bg-[#161616]/70 border-[1px] border-[#808080]/70 ">
-                <button
-                    class="w-[157px] h-[48px] bg-[#E50914] text-white font-medium text-[16.59px] rounded-[4px] flex justify-center items-center mx-auto">Get
-                    Started <span><img src="assets/mobile/arrow-white.svg" alt="arrow" class="pl-[8px]"></span>
-                </button>
+                <div class="flex flex-col gap-[15px] md:flex md:flex-row md:justify-center md:gap-[8px] md:mb-[25px]">
+                    <input type="text" name="" id="" placeholder="Email address"
+                        class="w-[75%] h-[48px] rounded-[4px] px-[16px] bg-[#161616]/70 border-[1px] border-[#808080]/70 mx-auto md:h-[56px] md:w-[356.25px] md:mx-[0]">
+                    <button
+                        class="w-[157px] h-[48px] bg-[#E50914] text-white font-medium text-[16.59px] md:text-[22.13px] rounded-[4px] flex justify-center items-center mx-auto md:h-[56px] md:w-[207px] md:mx-[0]">Get
+                        Started <span><img src="assets/mobile/arrow-white.svg" alt="arrow" class="pl-[8px]"></span>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
     <div>
-        <div class="h-[7px] bg-[#232323] mb-[5px]"></div>
+        <div class="h-[7px] bg-[#232323] mb-[5px] md:mb-[25px]"></div>
         <div class="px-[24px]">
             <p class="font-regular text-[16px] text-[#B2B2B2]">Questions? Call <span
                     class="font-regular text-[16px] text-[#B2B2B2] underline underline-offset-2">1-844-505-2993</span>
